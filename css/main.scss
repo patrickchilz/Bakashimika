@@ -1,0 +1,53 @@
+@mixin breakpoint ($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+
+        @content;
+        
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: montserrat, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background-image: url('imgaes/IMG-20240319-WA0089.jpg');
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        background-color: rgba(34, 34, 34, 0.5);
+
+    }
+    .content{
+        position: relative;
+        z-index: 1;
+        h1{
+            color: #fff;
+            font-size: 32px;
+            font-weight: 900;-
+        }
+    }
+} 

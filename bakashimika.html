@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+       <title>Bakashimika</title>
+
+        <link rel="stylesheet" href="css/main.css"/>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Bakashimika<span class="dot">.</span></a>
+            <div class="menuToggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#banner">Home</a> </li>
+                <li><a href="#about">Who we are</a></li>
+                <li><a href="#work">Gallery</a></li>
+                <li><a href="#Team">The Team</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+            
+        </header>
+
+            <section class="banner" id ="banner">
+                <img src="imgaes/sky.png" id="sky" alt="">
+                <img src="imgaes/guy.png" id="guy" alt="">
+                <div class="countdown"><h1 id="text">Bakashimika</h1> <br><br><p id="count">00 days : 00 hours: 00 mins : 00 secs</p></div>
+                <script src="js/main.js"></script>
+            </section>
+               
+        
+        
+
+        <section class="about" id="about">
+            <div class="row">
+                <div class="col50">
+                    <h2 class="titleText"><span>W</span>elcome to <span>B</span>akashimika</h2>
+                    <h3 class="titleText1">The International Photography Festival</h3>
+                    <p> Festival is an annual photography festival which celebrates the rich photographic
+                         community in Zambia and the Southern African region. The festival provides a 
+                         platform for emerging southern African photographers, who tell new and innovative 
+                         African stories through photography and lens-based art.
+                        <br><br>Festival brings together the wealth of photographic practices in 
+                        Zambia and the region and raises awareness of the existing 
+                        photographic talent. <br>
+                        The festival gives a platform to the visual storytellers and their contemporary
+                         stories found within the vibrant and visually exciting photographic 
+                         arts community of Southern African. 
+                    </p>
+                </div>
+                <div class="col50">
+                    <div class="imgBx">
+                        <img src="imgaes/immg.jpg">
+                        
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="gallery" id="work">
+            <div class="container">
+                <div class="slider">
+                    <div class="slides" style="--img: url('img1.jpg')">
+                        <div class="content">
+                            <h2>Slide 01</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Earum adipisci repellat enim illo neque sit, sapiente consectetur
+                                delectus iste, inventore dolore ducimus 
+                                ratione qui voluptatum facere, dolorem vel tempora aliquam.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="slides" style="--img: url('img2.jpg')">
+                        <div class="content">
+                            <h2>Slide 02</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Earum adipisci repellat enim illo neque sit, sapiente consectetur
+                                delectus iste, inventore dolore ducimus 
+                                ratione qui voluptatum facere, dolorem vel tempora aliquam.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="slides" style="--img: url('imgg.jpg')">
+                        <div class="content">
+                            <h2>Slide 03</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Earum adipisci repellat enim illo neque sit, sapiente consectetur
+                                delectus iste, inventore dolore ducimus 
+                                ratione qui voluptatum facere, dolorem vel tempora aliquam.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="slides" style="--img: url('img2.jpg')">
+                        <div class="content">
+                            <h2>Slide 04</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Earum adipisci repellat enim illo neque sit, sapiente consectetur
+                                delectus iste, inventore dolore ducimus 
+                                ratione qui voluptatum facere, dolorem vel tempora aliquam.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="slides" style="--img: url('imgg.jpg')">
+                        <div class="content">
+                            <h2>Slide 05</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Earum adipisci repellat enim illo neque sit, sapiente consectetur
+                                delectus iste, inventore dolore ducimus 
+                                ratione qui voluptatum facere, dolorem vel tempora aliquam.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slides" style="--img: url('img2.jpg')">
+                        <div class="content">
+                            <h2>Slide 06</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Earum adipisci repellat enim illo neque sit, sapiente consectetur
+                                delectus iste, inventore dolore ducimus 
+                                ratione qui voluptatum facere, dolorem vel tempora aliquam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <span class="prev"></span>
+                    <span class="next" id="next"></span>
+                </div>
+               </div>
+               <script type="text/javascript">
+                let next = document.querySelector('.next');
+                let prev = document.querySelector('.prev');
+                let slider = document.querySelector('.slider');
+        
+                next.addEventListener('click', function(){
+                    let slides = document.querySelectorAll('.slides');
+                    slider.appendChild(slides[0]);
+                })
+        
+                prev.addEventListener('click', function(){
+                    let slides = document.querySelectorAll('.slides');
+                    slider.prepend(slides[slides.length - 1]);
+                })
+               </script>
+        </section>
+        
+       
+    
+    <section class="Contact1" id="Contact1">
+        <div class="title">
+            <p>
+                <br><br>
+                <br><br>
+                <br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br>
+                <br><br>
+            </p>
+            
+           </div>
+    </section>
+    <section class="Team" id="Team">
+        <div class="title">
+            <h2 class="titleText">The <span>T</span>eam</h2>
+        </div>
+        <div class="content1">
+            <div class="box">
+                <div class="imgBx1">
+                    <img src="imgaes/person.png">
+                </div>
+                <div class="text">
+                    <h3> Patrick Chilaisha </h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx1">
+                    <img src="imgaes/person.png">
+                </div>
+                <div class="text">
+                    <h3> Kerstin Hacker </h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx1">
+                    <img src="imgaes/person.png">
+                </div>
+                <div class="text">
+                    <h3> Geoffery Phiri </h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx1">
+                    <img src="imgaes/person.png">
+                </div>
+                <div class="text">
+                    <h3> Edith Chiliboy </h3>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="Contact" id="Contact">
+        <div class="title">
+            <h2 class="titleText"><span>C</span>ontact Us</h2>
+            <p>To find out more about the festival and ask any further question do not hesitate to contact us</p>
+        </div>
+       
+        <div class="contactForm">
+            
+            <h3>Send Message</h3>
+            <div class="inputBox">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="inputBox">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="inputBox">
+                <textarea placeholder="Name"></textarea>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Send">
+            </div>
+            
+        </div>
+       
+      
+    </section>
+
+    <div class="copyrightText">
+        <p>Copyright 2024 <a href="#">Bakashimika</a> All Rights Reserved</p>
+    </div>
+
+
+
+
+    </body>
+</html>
