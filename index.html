@@ -6,6 +6,8 @@
        <title>Bakashimika</title>
 
         <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="css/gallery.css"/>
+        
     </head>
     <body>
         <header>
@@ -25,7 +27,11 @@
             <section class="banner" id ="banner">
                 <img src="imgaes/sky.png" id="sky" alt="">
                 <img src="imgaes/bg.jpg" id="guy" alt="">
-                <div class="countdown"><h1 id="text">Bakashimika</h1> <br><br><p id="count"><span>I</span>nternational <span>P</span>hotography <span>F</span>estival<span>.</span></p></div>
+                <div class="countdown">
+                    <h1 id="text">Bakashimika<span>.</span></h1>
+                     <br><br>
+                    <p id="count">International Photography Festival</p>
+                </div>
                 <script src="js/main.js"></script>
             </section>
                
@@ -35,15 +41,15 @@
         <section class="about" id="about">
             <div class="row reveal">
                 <div class="col50">
-                    <h2><span>W</span>elcome to</h2>
-                    <h2 class="titleText"> <span>B</span>akashimika <span>I</span>nternational <span>F</span>estival</h2>
-                    <h3 class="titleText1">
+        
+                    <h2 class="titleText"> Bakashimika<span>.</span></h2>
+                    <h3>International Photography Festival</h3>
+                    <p class="titleText1">
                         <br>
                         Bakashimika [ba:ka:∫i:mi:ka:]<br>
-                        Bemba for<br>
-                        ‘Collective of Storytellers’ <br>
+                        Bemba for: ‘Collective of Storytellers’ <br>
                         ‘they will tell stories in the future’
-                        </h3><br><br>
+                    </p><br>
                     <p>The Bakashimika International Photography Festival is an annual photography festival which celebrates the rich photographic community in Zambia and the Southern African region. The festival provides a platform for emerging southern African photographers, who tell new and innovative African stories through photography and lens-based art.<br>
 
                         The Bakashimika International Photography Festival brings together the wealth of photographic practices in Zambia and the region and raises awareness of the existing photographic talent. <br>
@@ -54,7 +60,7 @@
                         
                         The Bakashimika International Photography Festival recognises the steady growth in local audience numbers during photography events and aims to introduce photography to broader audiences in Southern Africa.<br>
                         
-                        The Bakashimika International Photography Festival contributes to creative education and photographic research in the region.
+                        The Bakashimika International Photography Festival contributes to creative education and photographic research in the region.<br>
                         
                         The Bakashimika International Photography Festival aims to be part of the international photography festival circuit and attract international photographic experts and bring international audiences to Zambia. 
                         
@@ -71,111 +77,51 @@
         </section>
 
 
-        <section class="gallery" id="work">
-            <div class="container reveal">
-                <div class="slider">
-                    <div class="slides" style="--img: url('img1.png')">
-                        <div class="content">
-                            <h2>Slide 01</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Earum adipisci repellat enim illo neque sit, sapiente consectetur
-                                delectus iste, inventore dolore ducimus 
-                                ratione qui voluptatum facere, dolorem vel tempora aliquam.
-                            </p>
-                        </div>
-                    </div>
-        
-                    <div class="slides" style="--img: url('img2.png')">
-                        <div class="content">
-                            <h2>Slide 02</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Earum adipisci repellat enim illo neque sit, sapiente consectetur
-                                delectus iste, inventore dolore ducimus 
-                                ratione qui voluptatum facere, dolorem vel tempora aliquam.
-                            </p>
-                        </div>
-                    </div>
-        
-                    <div class="slides" style="--img: url('img3.jpg')">
-                        <div class="content">
-                            <h2>Slide 03</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Earum adipisci repellat enim illo neque sit, sapiente consectetur
-                                delectus iste, inventore dolore ducimus 
-                                ratione qui voluptatum facere, dolorem vel tempora aliquam.
-                            </p>
-                        </div>
-                    </div>
-        
-                    <div class="slides" style="--img: url('img4.jpeg')">
-                        <div class="content">
-                            <h2>Slide 04</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Earum adipisci repellat enim illo neque sit, sapiente consectetur
-                                delectus iste, inventore dolore ducimus 
-                                ratione qui voluptatum facere, dolorem vel tempora aliquam.
-                            </p>
-                        </div>
-                    </div>
-        
-                    <div class="slides" style="--img: url('img5.png')">
-                        <div class="content">
-                            <h2>Slide 05</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Earum adipisci repellat enim illo neque sit, sapiente consectetur
-                                delectus iste, inventore dolore ducimus 
-                                ratione qui voluptatum facere, dolorem vel tempora aliquam.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="slides" style="--img: url('img6.jpg')">
-                        <div class="content">
-                            <h2>Slide 06</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Earum adipisci repellat enim illo neque sit, sapiente consectetur
-                                delectus iste, inventore dolore ducimus 
-                                ratione qui voluptatum facere, dolorem vel tempora aliquam.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="buttons">
-                    <span class="prev"></span>
-                    <span class="next" id="next"></span>
-                </div>
+        <section class="wrapper-gallery" id="work">
+            <div class="gallery-img img1">
+               <div>
+                <a href="#">Reflections</a>
                </div>
-               <script type="text/javascript">
-                let next = document.querySelector('.next');
-                let prev = document.querySelector('.prev');
-                let slider = document.querySelector('.slider');
-        
-                next.addEventListener('click', function(){
-                    let slides = document.querySelectorAll('.slides');
-                    slider.appendChild(slides[0]);
-                })
-        
-                prev.addEventListener('click', function(){
-                    let slides = document.querySelectorAll('.slides');
-                    slider.prepend(slides[slides.length - 1]);
-                })
-               </script>
+            </div>
+            <div class="gallery-img img2">
+                <div>
+                 <a href="#">SoK</a>
+                </div>
+             </div>
+             <div class="gallery-img img3">
+                <div>
+                 <a href="#">Photocovid</a>
+                </div>
+             </div>
+             <div class="gallery-img img4">
+                <div>
+                 <a href="#">reflections</a>
+                </div>
+             </div>
+             <div class="gallery-img img5">
+                <div>
+                 <a href="#">Sok</a>
+                </div>
+             </div>
+             <div class="gallery-img img6">
+                <div>
+                 <a href="#">masculinity</a>
+                </div>
+             </div>
+             <div class="gallery-img img7">
+                <div>
+                 <a href="#">Sok</a>
+                </div>
+             </div>
+
+               
+               
         </section>
-        
-       
+ <script src="js/main.js"></script>
+   
     
-    <section class="Contact1" id="Contact1">
-        <div class="title">
-            <p>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br>
-                <br><br>
-            </p>
-            
-           </div>
-    </section>
+   
+    
     <section class="Event reveal" id="event">
         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 <div class="elfsight-app-39d7f64a-a47a-4e9e-a263-eb6691ed7545" data-elfsight-app-lazy></div>
@@ -215,6 +161,38 @@
                 </div>
                 <div class="text">
                     <h3> Edith Chiliboy </h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx1">
+                    <img src="imgaes/person.png">
+                </div>
+                <div class="text">
+                    <h3> Mwape Mumbi </h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx1">
+                    <img src="imgaes/person.png">
+                </div>
+                <div class="text">
+                    <h3> Patricia Mpundu </h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx1">
+                    <img src="imgaes/person.png">
+                </div>
+                <div class="text">
+                    <h3> Louise Fedotov - Clements </h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx1">
+                    <img src="imgaes/person.png">
+                </div>
+                <div class="text">
+                    <h3> ABSA </h3>
                 </div>
             </div>
         </div>
