@@ -442,7 +442,52 @@ section{
 
   
 }
-
+@media (max-width: 400px){
+    .banner .content h2{
+        font-size: 1em;
+        color: #fff;
+    }
+    .banner{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        flex-direction: column;
+    }
+    .banner .countdown #text{
+        font-size: 3em;
+        justify-content: center;
+    }
+    .countdown{
+        position: relative;
+        bottom:150px;
+        left:0%;
+    }
+    .countdown #count{
+        font-size: 15px;
+        font-weight: 100;
+        bottom: 20px;
+        left: 10%;
+    
+    }
+   
+   
+   .banner img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom:0%;
+    object-fit: cover;
+    pointer-events: none;
+}
+    
+}
 
 
 
