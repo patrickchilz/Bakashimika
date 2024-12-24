@@ -1,131 +1,107 @@
-#work{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 10px;
-    grid-template-areas: 
-    "img1 img2 img3 img4"
-    "img5 img6 img3 img7";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+*
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins',sans-serif;
 }
- #work .gallery-img{
-    width: 100%;
-    height: 300px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
- }
 
- #work .img1{
-    grid-area: img1;
-    background-image: url("../imgaes/thumbs/img1.jpg");
- }
+.container{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+}
 
- #work .img2{
-    grid-area: img2;
-    background-image: url("../imgaes/thumbs/img2.jpg");
- }
+.container #picture{
+   width: 50%;
+   height: 85%;
+   transition: 0.5s;
+   background: #ccc;
+   
+}
 
- #work .img3{
-    grid-area: img3;
-    background-image: url("../imgaes/thumbs/img3.jpg");
-    height: 610px;
- }
+.container #picture.one{
+   background: url(../imgaes/img1.jpg);
+   background-size: cover;
+}
 
- #work .img4{
-    grid-area: img4;
-    background-image: url("../imgaes/thumbs/img4.jpg");
- }
+.container #picture.two{
+   background: url(../profiles/Scotty/scotty\ 3.jpg);
+   background-size: cover;
+}
 
- #work .img5{
-    grid-area: img5;
-    background-image: url("../imgaes/thumbs/img5.jpg");
- }
+.container #picture.three{
+   background: url(../profiles/Natasha/natasha\ 8.jpg);
+   background-size: cover;
+}
+.container #picture.four{
+   background: url(../profiles/Namukolo/Namukolo\ 5.jpg);
+   background-size: cover;
+}
+.container #picture.five{
+   background: url(../profiles/Maggie/maggie\ 2.JPG);
+   background-size: cover;
+}
+.container #picture.six{
+   background: url(../profiles/Maingaila/banner.jpg);
+   background-size: cover;
+}
+.container #picture.seven{
+   background: url(../profiles/VICTOR/victor\ 4.jpg);
+   background-size: cover;
+}
+.container #picture.eight{
+   background: url(../profiles/alexander/alex\ 6.jpg);
+   background-size: cover;
+}
+.container #picture.nine{
+   background: url(../profiles/Wakapembe/Wakapembe\ 4.jpg);
+   background-size: cover;
+}
+.container ul{
+   height: 100%;
+   padding: 40px 40px;
+   margin-left: 10%;
+   margin-top: 10%;
+}
 
- #work .img6{
-    grid-area: img6;
-    background-image: url("../imgaes/thumbs/img6.jpg");
- }
- #work .img7{
-    grid-area: img7;
-    background-image: url("../imgaes/thumbs/img7.jpg");
- }
+.container ul li {
+   position: relative;
+   list-style: none;
+   padding: 0 40px;
+}
 
- .gallery-img div{
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
+.container ul li a {
+   display: block;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-size: 2em;
+   color: #ccc;
+   text-transform: capitalize;
+   font-weight: 700;
+   transition: 0.5s;
+}
 
- .gallery-img a{
-    font-family: poppins;
-    font-size: 18px;
-    color: #ccc;
-    text-decoration: none;
-    text-transform: uppercase;
- }
+.container ul li a:hover,
+.container ul li.active a{
+   color: #262626;
+   transform: translateX(60px);
+}
 
- .gallery-img div:hover{
-   opacity: 0.8;
-   transition: all ease-in-out 100ms;
- }
+.container ul li::before{
+   content: '';
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%) scaleX(0);
+   width: 50px;
+   height: 4px;
+   background: #f00;
+   transition: 0.5s;
+   transform-origin: left;
+}
 
-
- .img-window{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
- }
- .img-window img{
-    max-height: 80vh;
-    max-width: 80vw;
- }
-
- .img-btn-next {
-    display: block;
-    padding: 6px 10px;
-    border-radius: 5px;
-    background-color: #111111;
-    position: fixed;
-    top: 48vh;
-    z-index: 500;
-    font-family: poppins;
-    color: #ccc;
-    cursor: pointer;
-    text-transform: uppercase;
- }
-
- .img-btn-next:hover{
-    opacity: 0.8;
-    color: #ff0157;
- }
- .img-btn-prev {
-    display: block;
-    padding: 6px 10px;
-    border-radius: 5px;
-    background-color: #111111;
-    position: fixed;
-    top: 48vh;
-    z-index: 500;
-    font-family: poppins;
-    color: #ccc;
-    cursor: pointer;
-    text-transform: uppercase;
- }
-
- .img-btn-prev:hover{
-    opacity: 0.8;
-    color: #ff0157;
- }
+.container ul li:hover::before,
+.container ul li.active::before{
+   transform: translateY(-50%) scaleX(1);
+}

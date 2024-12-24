@@ -7,6 +7,7 @@
 
         <link rel="stylesheet" href="css/main.css"/>
         <link rel="stylesheet" href="css/gallery.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
         
     </head>
     <body>
@@ -16,13 +17,15 @@
             <ul class="navigation">
                 <li><a href="#banner">Home</a> </li>
                 <li><a href="#about">Who we are</a></li>
-                <li><a href="#work">Gallery</a></li>
+                <li><a href="#artists">Artists</a></li>
                 <li><a href="#event">Festival</a></li>
                 <li><a href="#Team">The Team</a></li>
                 <li><a href="#Contact">Contact</a></li>
             </ul>
             
         </header>
+
+        <div transition-style="in:wipe:left">
 
             <section class="banner" id ="banner">
                 <img src="imgaes/sky.png" id="sky" alt="">
@@ -77,44 +80,40 @@
         </section>
 
 
-        <section class="wrapper-gallery" id="work">
-            <div class="gallery-img img1">
-               <div>
-                <a href="#">Reflections</a>
-               </div>
-            </div>
-            <div class="gallery-img img2">
-                <div>
-                 <a href="#">SoK</a>
-                </div>
-             </div>
-             <div class="gallery-img img3">
-                <div>
-                 <a href="#">Photocovid</a>
-                </div>
-             </div>
-             <div class="gallery-img img4">
-                <div>
-                 <a href="#">reflections</a>
-                </div>
-             </div>
-             <div class="gallery-img img5">
-                <div>
-                 <a href="#">Sok</a>
-                </div>
-             </div>
-             <div class="gallery-img img6">
-                <div>
-                 <a href="#">masculinity</a>
-                </div>
-             </div>
-             <div class="gallery-img img7">
-                <div>
-                 <a href="#">Sok</a>
-                </div>
-             </div>
-
-               
+        <div class="container" id="artists">
+         
+            <div id="picture" class="one"></div>
+         
+            <ul>
+               <li rel="one" class="active"><a href="./profiles/patrick.html">Patrick Chilaisha</a></li>
+               <li rel="two"><a href="./profiles/scotty.html">Scotty Jongolo</a></li>
+               <li rel="three"><a href="./profiles/natasha.html">Natasha Mwila</a></li>
+               <li rel="four"><a href="./profiles/namukolo.html">Namukolo Siyumbwa</a></li>
+               <li rel="five"><a href="./profiles/maggie.html">Maggie Banda</a></li>
+               <li rel="six"><a href="./profiles/mainga.html">Maingaila S. Muvundika</a></li>
+               <li rel="seven"><a href="./profiles/victor.html">Victor Mwakapila</a></li>
+               <li rel="eight"><a href="./profiles/alexander.html">Alexander Bandela</a></li>
+               <li rel="nine"><a href="./profiles/waka.html">Wakapembe Chisha</a></li>
+            </ul>
+         </div>
+         <script>
+            document.querySelectorAll('ul li').forEach(function
+       (listItem){
+       listItem.addEventListener('mouseenter',function(){
+           let relClass = this.getAttribute('rel');
+           let picture = document.getElementById('picture');
+           picture.className = '';
+           picture.classList.add(relClass);
+           this.classList.add('active');
+           this.parentElement.querySelectorAll('li').forEach
+           (function(sibling){
+               if(sibling !== listItem){
+                   sibling.classList.remove('active');
+               }
+           })
+       })
+   })
+         </script>
                
         </section>
  <script src="js/gallery.js"></script>
@@ -231,6 +230,6 @@
 
 
 
-
+</div>
     </body>
 </html>

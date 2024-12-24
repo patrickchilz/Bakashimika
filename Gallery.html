@@ -1,60 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device, initial-scale=1.0">
+        
         <title>Gallery</title>
-        <link rel="stylesheet" href="css/main.css"/>
-        <link rel="stylesheet" href="css/gallery.css"/>
+        
+        <link rel="stylesheet" href="./css/gallery.css"/>
+        
         
 
     </head>
     <body>
-        
-           
-            <section class="wrapper-gallery" id="work">
-                <div class="gallery-img img1">
-                   <div>
-                    <a href="#">title 1</a>
-                   </div>
-                </div>
-                <div class="gallery-img img2">
-                    <div>
-                     <a href="#">title 1</a>
-                    </div>
+        <div class="blur-overlay"></div>
+         <div class="popup">
+             <div class="top-bar">
+                 <span class="close-btn"></span>
+             </div> 
+                 <button class="arrow-btn left-arrow" id="arrowleft"></button> 
+                 <button class="arrow-btn right-arrow"></button> 
+                 <img src="profiles/patrick/p1.jpg" class="large-image" alt=""> 
+                </div> 
+            <div class="gallery"> 
+                <div class="first"> 
+                    <img src="profiles/patrick/p1.jpg" alt="" class="image">
                  </div>
-                 <div class="gallery-img img3">
-                    <div>
-                     <a href="#">title 1</a>
-                    </div>
+                  <div class="first"> 
+                    <img src="profiles/patrick/p2.jpg" alt="" class="image">
                  </div>
-                 <div class="gallery-img img4">
-                    <div>
-                     <a href="#">title 1</a>
-                    </div>
-                 </div>
-                 <div class="gallery-img img5">
-                    <div>
-                     <a href="#">title 1</a>
-                    </div>
-                 </div>
-                 <div class="gallery-img img6">
-                    <div>
-                     <a href="#">title 1</a>
-                    </div>
-                 </div>
-                 <div class="gallery-img img7">
-                    <div>
-                     <a href="#">title 1</a>
-                    </div>
-                 </div>
+                  <div class="first">
+                     <img src="profiles/patrick/p3.jpg" alt="" class="image"> 
+                    </div> 
+                    <div class="first">
+                         <img src="profiles/patrick/p4.jpg" alt="" class="image">
+                     </div> 
+                     <div class="first">
+                         <img src="profiles/patrick/p5.jpg" alt="" class="image">
+                     </div> 
+                     <div class="first">
+                        <img src="profiles/patrick/p6.jpg" alt="" class="image">
+                    </div> 
+                    </div> 
+                    <script> 
+                    document.addEventListener('DOMContentLoaded', () => { 
+                        const images = [...document.querySelectorAll('.image')]; 
+                        const popup = document.querySelector('.popup');
+                        const blurOverlay = document.querySelector('.blur-overlay'); 
+                        const closeBtn = document.querySelector('.close-btn'); 
+                        const largeImage = document.querySelector('.large-image'); 
+                        const leftArrow = document.querySelector('.left-arrow'); 
+                        const rightArrow = document.querySelector('.right-arrow'); 
+                       
+                        if 
+                        (!popup || !closeBtn || !largeImage || !leftArrow || !rightArrow) { 
+                            console.error('One or more required elements are missing.');
+                             return; 
+                             } 
+                             let index = 0; 
+                             images.forEach((item, i) => { 
+                                item.addEventListener('click', () => {
+                                     console.log('Image clicked:', i); 
+                                     updateImage(i); 
+                                     
+                                     popup.classList.toggle('active'); 
+                                     blurOverlay.style.display = 'block';
+                                     }); 
+                                     
+                                     }); 
+                                     const updateImage = (i) => { 
+                                        let path = `profiles/patrick/p${i + 1}.jpg`;
+                                         if 
+                                         (largeImage) { largeImage.src = path; } 
+                                        };
+                                        
+                                    closeBtn.addEventListener('click', () => { 
+                                            popup.classList.toggle('active');
+                                            blurOverlay.style.display = 'none';
+                                             });
 
-                   
-                   
-            </section>
-     <script src="js/main.js"></script>
-       
+                                    leftArrow.addEventListener('click', () => { 
+                                            if (index > 0) { 
+                                                updateImage(index - 1);
 
-    </body>
+                                             index--; } }); 
+                                             
+                                    rightArrow.addEventListener('click', () => {
+                                                 if 
+
+                                            (index < images.length - 1) {
+                                                    updateImage(index + 1); 
+                                                    index++; 
+                                                    } 
+                                             }); 
+                                    }); 
+                            </script>
+     </body>
 </html>
