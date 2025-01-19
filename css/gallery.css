@@ -24,40 +24,53 @@
 .container #picture.one{
    background: url(../profiles/patrick/p5.jpg);
    background-size: cover;
+   background-position: 50%;
 }
 
 .container #picture.two{
    background: url(../profiles/Scotty/scotty\ 3.jpg);
-   background-size: cover;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: 50%;
 }
 
 .container #picture.three{
    background: url(../profiles/Natasha/natasha\ 8.jpg);
-   background-size: cover;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: 50%;
 }
 .container #picture.four{
    background: url(../profiles/Namukolo/Namukolo\ 5.jpg);
-   background-size: cover;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: 50%;
 }
 .container #picture.five{
    background: url(../profiles/Maggie/maggie\ 2.JPG);
    background-size: cover;
+   background-position: 50%;
 }
 .container #picture.six{
    background: url(../profiles/Maingaila/banner.jpg);
    background-size: cover;
+   background-position: 50%;
 }
 .container #picture.seven{
    background: url(../profiles/VICTOR/victor\ 4.jpg);
-   background-size: cover;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: 50%;
 }
 .container #picture.eight{
    background: url(../profiles/alexander/alex\ 6.jpg);
    background-size: cover;
+   background-position: 50%;
 }
 .container #picture.nine{
    background: url(../profiles/Wakapembe/Wakapembe\ 4.jpg);
    background-size: cover;
+   background-position: 50%;
 }
 .container ul{
    height: 100%;
